@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
+        <property name="url" value="jdbc:mysql://192.168.9.222:3306/studb" />
+        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver" />
+        <property name="username" value="admin" />
+        <property name="password" value="sentPass123" />
+    </bean>
+
+    <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate" >
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="studentDao" class="org.example.dao.impl.StudentDaoImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
+
+    <bean id="studentService" class="org.example.service.impl.StudentServiceImpl">
+        <property name="studentDao" ref="studentDao" />
+    </bean>
+
+    <bean id="studentController" class="org.example.controller.StudentController" >
+        <property name="studentService" ref="studentService" />
+    </bean>
+</beans>
