@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 下面的配置展示了如何进行 IoC 的依赖注入（DI, Dependency Injection） -->
+    <!-- 注意、引用和被引用的组件必须都在 IoC 容器中 -->
+
+    <!-- 1. 构造函数注入 -->
+    <bean id="userDao" class="org.example.ioc_02.UserDao"/>
+    <bean id="userService" class="org.example.ioc_02.UserService">
+        <!-- ref 是引用其他对象 -->
+        <constructor-arg name="userDao" ref="userDao"/>
+        <!-- value 是值 -->
+        <constructor-arg name="name" value="Bruce"/>
+        <constructor-arg name="age" value="18"/>
+    </bean>
+
+    <!-- 触发 setter 方法注入 -->
+    <bean id="movieFinder" class="org.example.ioc_02.MovieFinder"/>
+    <bean id="simpleMovieLister" class="org.example.ioc_02.SimpleMovieLister">
+        <property name="movieFinder" ref="movieFinder"/>
+        <property name="movieName" value="Who am I?"/>
+    </bean>
+
+</beans>

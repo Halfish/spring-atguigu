@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="javaBean" class="org.example.ioc_03.JavaBean" init-method="init" destroy-method="clear" />
+
+<!--    <bean id="javaBeanSingle" class="org.example.ioc_03.JavaBean" scope="singleton" />-->
+    <bean id="javaBeanSingle" class="org.example.ioc_03.JavaBean" scope="prototype" />
+</beans>

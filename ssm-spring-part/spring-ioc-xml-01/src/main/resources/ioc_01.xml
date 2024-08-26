@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- 1. 声明一个无参数的对象 -->
+    <bean id="happyComponent" class="org.example.ioc_01.HappyComponent"></bean>
+
+    <!-- 2. 声明一个静态工厂类 -->
+    <bean id="clientService" class="org.example.ioc_01.ClientService" factory-method="createInstance"></bean>
+
+    <!-- 3. 声明一个非静态工厂类 -->
+    <!-- 3.1. 声明工厂类 -->
+    <bean id="defaultServiceLocator" class="org.example.ioc_01.DefaultServiceLocator"></bean>
+    <!-- 3.2. 指定工厂方法 -->
+    <bean id="locator" factory-bean="defaultServiceLocator" factory-method="createClientService"></bean>
+
+</beans>
