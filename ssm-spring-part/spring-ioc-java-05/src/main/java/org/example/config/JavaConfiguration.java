@@ -2,10 +2,9 @@ package org.example.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.PropertySource;
+import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.*;
+import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.xml.crypto.Data;
 
@@ -32,6 +31,7 @@ public class JavaConfiguration {
     @Value("${atguigu.password}")
     private String password;
 
+    @Scope(ConfigurableBeanFactory.SCOPE_SINGLETON)
     @Bean
     public DruidDataSource dataSource() {
         DruidDataSource dataSource = new DruidDataSource();
@@ -41,4 +41,20 @@ public class JavaConfiguration {
         dataSource.setPassword(password);
         return dataSource;
     }
+
+    @Bean
+    public JdbcTemplate jdbcTemplate() {
+        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+        // 方案一：直接调用方法；
+        jdbcTemplate.setDataSource(dataSource());
+        return jdbcTemplate;
+    }
+
+//    @Bean
+//    public JdbcTemplate jdbcTemplate2(DruidDataSource dataSource) {
+//        // 方案二：直接作为函数形参
+//        JdbcTemplate jdbcTemplate = new JdbcTemplate();
+//        jdbcTemplate.setDataSource(dataSource);
+//        return jdbcTemplate;
+//    }
 }
