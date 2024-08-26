@@ -6,8 +6,6 @@ import org.springframework.beans.factory.config.ConfigurableBeanFactory;
 import org.springframework.context.annotation.*;
 import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.xml.crypto.Data;
-
 /*
  * Java配置类，替代xml
  *  1. 包扫描注解配置
