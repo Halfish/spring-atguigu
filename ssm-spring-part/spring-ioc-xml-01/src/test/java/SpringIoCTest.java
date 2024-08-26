@@ -1,5 +1,3 @@
-package org.example.test;
-
 import org.example.ioc_01.HappyComponent;
 import org.example.ioc_03.JavaBean;
 import org.example.ioc_04.JavaBeanName;
