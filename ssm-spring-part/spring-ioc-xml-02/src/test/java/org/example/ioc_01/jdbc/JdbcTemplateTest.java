@@ -1,8 +1,8 @@
-package org.example.jdbc;
+package org.example.ioc_01.jdbc;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import org.example.controller.StudentController;
-import org.example.pojo.Student;
+import org.example.ioc_01.controller.StudentController;
+import org.example.ioc_01.pojo.Student;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;

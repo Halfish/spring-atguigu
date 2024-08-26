@@ -1,8 +1,8 @@
-package org.example.service.impl;
+package org.example.ioc_01.service.impl;
 
-import org.example.dao.StudentDao;
-import org.example.pojo.Student;
-import org.example.service.StudentService;
+import org.example.ioc_01.dao.StudentDao;
+import org.example.ioc_01.pojo.Student;
+import org.example.ioc_01.service.StudentService;
 
 import java.util.List;
 

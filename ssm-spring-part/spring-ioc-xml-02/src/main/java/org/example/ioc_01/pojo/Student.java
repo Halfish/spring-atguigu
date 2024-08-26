@@ -1,4 +1,4 @@
-package org.example.pojo;
+package org.example.ioc_01.pojo;
 
 public class Student {
 

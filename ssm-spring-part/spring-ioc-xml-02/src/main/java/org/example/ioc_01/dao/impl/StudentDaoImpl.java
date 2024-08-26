@@ -1,7 +1,7 @@
-package org.example.dao.impl;
+package org.example.ioc_01.dao.impl;
 
-import org.example.dao.StudentDao;
-import org.example.pojo.Student;
+import org.example.ioc_01.dao.StudentDao;
+import org.example.ioc_01.pojo.Student;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 

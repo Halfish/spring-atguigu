@@ -1,7 +1,7 @@
-package org.example.controller;
+package org.example.ioc_01.controller;
 
-import org.example.pojo.Student;
-import org.example.service.StudentService;
+import org.example.ioc_01.pojo.Student;
+import org.example.ioc_01.service.StudentService;
 
 import java.util.List;
 

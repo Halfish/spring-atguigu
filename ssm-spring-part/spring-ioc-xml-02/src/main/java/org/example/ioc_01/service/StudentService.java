@@ -1,6 +1,6 @@
-package org.example.service;
+package org.example.ioc_01.service;
 
-import org.example.pojo.Student;
+import org.example.ioc_01.pojo.Student;
 
 import java.util.List;
 

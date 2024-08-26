@@ -1,6 +1,6 @@
-package org.example.dao;
+package org.example.ioc_01.dao;
 
-import org.example.pojo.Student;
+import org.example.ioc_01.pojo.Student;
 
 import java.util.List;
 
