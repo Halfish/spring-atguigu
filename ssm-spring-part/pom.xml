@@ -17,6 +17,7 @@
         <module>spring-ioc-xml-01</module>
         <module>spring-ioc-test-java-06</module>
         <module>spring-aop-annotation-01</module>
+        <module>spring-aop-annotation-02</module>
     </modules>
 
     <properties>
@@ -55,6 +56,16 @@
             <groupId>com.alibaba</groupId>
             <artifactId>druid</artifactId>
             <version>1.2.23</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>6.1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-aspects</artifactId>
+            <version>6.1.11</version>
         </dependency>
     </dependencies>
 

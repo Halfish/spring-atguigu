@@ -5,7 +5,7 @@
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="javaBean" class="org.example.ioc_04.JavaBeanFactoryBean">
+    <bean id="javaBean" class="com.atguigu.ioc_04.JavaBeanFactoryBean">
         <property name="name" value="Bruce" />
     </bean>
 

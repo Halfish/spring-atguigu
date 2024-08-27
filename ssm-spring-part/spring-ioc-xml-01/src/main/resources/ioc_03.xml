@@ -4,8 +4,8 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="javaBean" class="org.example.ioc_03.JavaBean" init-method="init" destroy-method="clear" />
+    <bean id="javaBean" class="com.atguigu.ioc_03.JavaBean" init-method="init" destroy-method="clear" />
 
-<!--    <bean id="javaBeanSingle" class="org.example.ioc_03.JavaBean" scope="singleton" />-->
-    <bean id="javaBeanSingle" class="org.example.ioc_03.JavaBean" scope="prototype" />
+<!--    <bean id="javaBeanSingle" class="ioc_03.com.atguigu.JavaBean" scope="singleton" />-->
+    <bean id="javaBeanSingle" class="com.atguigu.ioc_03.JavaBean" scope="prototype" />
 </beans>

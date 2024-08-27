@@ -1,10 +1,7 @@
-import org.example.controller.StudentController;
-import org.example.pojo.Student;
+import com.atguigu.controller.StudentController;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-
-import java.util.List;
 
 public class TestAnnotation {
 

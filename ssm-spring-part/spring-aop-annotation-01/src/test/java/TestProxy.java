@@ -1,7 +1,7 @@
-import org.example.Calculator;
-import org.example.CalculatorPureImpl;
-import org.example.dynamics.ProxyFactory;
-import org.example.statics.StaticProxyCalculator;
+import com.atguigu.Calculator;
+import com.atguigu.CalculatorPureImpl;
+import com.atguigu.dynamics.ProxyFactory;
+import com.atguigu.statics.StaticProxyCalculator;
 import org.junit.Test;
 
 public class TestProxy {

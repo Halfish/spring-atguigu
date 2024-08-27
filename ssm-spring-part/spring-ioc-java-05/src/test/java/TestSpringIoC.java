@@ -1,7 +1,7 @@
 import com.alibaba.druid.pool.DruidDataSource;
-import org.example.config.JavaConfiguration;
-import org.example.config.JavaConfigurationA;
-import org.example.ioc_01.StudentController;
+import com.atguigu.config.JavaConfiguration;
+import com.atguigu.config.JavaConfigurationA;
+import com.atguigu.ioc_01.StudentController;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;

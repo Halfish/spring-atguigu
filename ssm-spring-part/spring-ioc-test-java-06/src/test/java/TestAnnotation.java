@@ -1,6 +1,6 @@
-import org.example.components.ClassA;
-import org.example.components.ClassB;
-import org.example.config.JavaConfig;
+import com.atguigu.components.ClassA;
+import com.atguigu.components.ClassB;
+import com.atguigu.config.JavaConfig;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

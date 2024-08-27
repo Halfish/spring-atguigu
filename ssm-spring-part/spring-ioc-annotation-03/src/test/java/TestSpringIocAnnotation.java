@@ -1,9 +1,8 @@
-import org.example.ioc_01.MyController;
-import org.example.ioc_01.MyDao;
-import org.example.ioc_01.MyService;
-import org.example.ioc_02.JavaBean;
-import org.example.ioc_03.UserController;
-import org.example.ioc_04.NewJavaBean;
+import com.atguigu.ioc_01.MyDao;
+import com.atguigu.ioc_01.MyService;
+import com.atguigu.ioc_02.JavaBean;
+import com.atguigu.ioc_03.UserController;
+import com.atguigu.ioc_04.NewJavaBean;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

@@ -1,7 +1,7 @@
-import org.example.ioc_01.HappyComponent;
-import org.example.ioc_03.JavaBean;
-import org.example.ioc_04.JavaBeanName;
-import org.example.ioc_04.JavaBeanFactoryBean;
+import com.atguigu.ioc_01.HappyComponent;
+import com.atguigu.ioc_03.JavaBean;
+import com.atguigu.ioc_04.JavaBeanName;
+import com.atguigu.ioc_04.JavaBeanFactoryBean;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
