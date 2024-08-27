@@ -18,6 +18,7 @@
         <module>spring-ioc-test-java-06</module>
         <module>spring-aop-annotation-01</module>
         <module>spring-aop-annotation-02</module>
+        <module>spring-aop-annotation-03</module>
     </modules>
 
     <properties>

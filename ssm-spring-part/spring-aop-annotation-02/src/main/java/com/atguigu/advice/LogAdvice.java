@@ -1,6 +1,7 @@
 package com.atguigu.advice;
 
 import org.aspectj.lang.annotation.*;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /*
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Component;
  */
 @Component
 @Aspect
+@Order(value=10)  // 指定优先级，值越小优先级越高
 public class LogAdvice {
 
     // 定义一个切点表达式
