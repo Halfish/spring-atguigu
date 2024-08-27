@@ -19,6 +19,7 @@
         <module>spring-aop-annotation-01</module>
         <module>spring-aop-annotation-02</module>
         <module>spring-aop-annotation-03</module>
+        <module>spring-tx-01</module>
     </modules>
 
     <properties>
@@ -66,6 +67,12 @@
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aspects</artifactId>
+            <version>6.1.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <!-- Spring 事务 -->
+            <artifactId>spring-tx</artifactId>
             <version>6.1.11</version>
         </dependency>
     </dependencies>
