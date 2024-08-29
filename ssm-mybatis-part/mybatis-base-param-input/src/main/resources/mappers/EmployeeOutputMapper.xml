@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- 测试返回结果 -->
+<mapper namespace="org.example.mapper.EmployeeOutputMapper">
+    <delete id="deleteById">
+        delete from t_emp where emp_id = #{id}
+    </delete>
+
+    <!-- 这里是类的别名 -->
+    <select id="queryById" resultType="ergouzi">
+        select * from t_emp where emp_id = #{id}
+    </select>
+
+    <!-- java.lang.String 可以简写为 string -->
+    <!-- 也可以在 typeAlias 标签里自定义类型 -->
+    <select id="queryNameById" resultType="java.lang.String">
+        select emp_name from t_emp where emp_id = #{id}
+    </select>
+
+    <!-- java.lang.Double 可以简写为 double -->
+    <select id="querySalaryById" resultType="double">
+        select emp_salary from t_emp where emp_id = #{id}
+    </select>
+
+    <!-- 接收 map 类型 -->
+    <select id="selectEmpNameAndMaxSalary" resultType="map">
+        select emp_name 员工名, emp_salary 员工工资, (select avg(emp_salary) from t_emp) 部门平均工资
+        from t_emp where emp_salary = (select max(emp_salary) from t_emp)
+    </select>
+
+    <!-- 返回列表，只需要指定泛型-->
+    <select id="queryNamesBySalary" resultType="string">
+        select emp_name from t_emp where emp_salary > #{salary}
+    </select>
+
+    <!-- 返回列表，同理 -->
+    <select id="queryAll" resultType="ergouzi">
+        select * from t_emp
+    </select>
+
+    <insert id="insertEmployee">
+        insert into t_emp () values ()
+    </insert>
+
+</mapper>

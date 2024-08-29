@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="org.example.mapper.EmployeeMapper">
+    <!-- 声明标签，写 sql 语句 -->
+    <!-- 不支持方法重载 -->
+    <select id="queryById" resultType="org.example.pojo.Employee">
+        select emp_id as empId, emp_name as empName, emp_salary as empSalary from t_emp where emp_id = #{id}
+    </select>
+
+    <!--
+        #{id} 是占位符 + 赋值
+        ${id} 直接是字符串拼接
+     -->
+    <delete id="deleteById">
+        delete from t_emp where id = #{id}
+    </delete>
+
+    <!-- 这里resultType没有写全限定符，是因为 mybatis-config.xml 里定义了包的别名 -->
+    <select id="queryBySalary" resultType="Employee">
+        select emp_id as empId, emp_name as empName, emp_salary as empSalary
+        from t_emp where emp_salary = #{salary}
+    </select>
+
+    <!-- 输入参数是实体对象 -->
+    <insert id="insertEmp">
+        insert into t_emp (emp_name, emp_salary) values (#{empName}, #{empSalary})j
+    </insert>
+
+    <!-- 输入参数有多个，注意变量名不能随便写 -->
+    <select id="queryByNameAndSalary" resultType="org.example.pojo.Employee">
+        select emp_id as empId, emp_name as empName, emp_salary as empSalary
+        from t_tmp where emp_name = #{a} and emp_salary = #{b}
+    </select>
+
+    <!-- 传入map，变量直接用map的key -->
+    <insert id="insertEmpMap">
+        insert into t_emp (emp_name, emp_salary) values (#{name}, #{salary})j
+    </insert>
+</mapper>
