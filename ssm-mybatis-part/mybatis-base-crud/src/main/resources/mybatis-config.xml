@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <!-- 开启日志，输出到控制台 -->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!-- 驼峰变量自动映射 -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <typeAliases>
+        <package name="org.example.pojo" />
+    </typeAliases>
+
+    <environments default="development">
+        <environment id="development">
+            <!-- mybatis 内置的事务管理器 -->
+            <transactionManager type="JDBC" />
+
+            <!-- 配置数据源 -->
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.9.222:3306/mybatis-example"/>
+                <property name="username" value="admin"/>
+                <property name="password" value="sentPass123"/>
+            </dataSource>
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mappers/UserMapper.xml" />
+    </mappers>
+</configuration>

@@ -11,6 +11,7 @@
     <modules>
         <module>mybatis-base-helloworld</module>
         <module>mybatis-base-param-input</module>
+        <module>mybatis-base-crud</module>
     </modules>
 
     <properties>
