@@ -1,0 +1,9 @@
+# yaml 文件有层次，可以继承
+server:
+  port: 90
+  servlet:
+    context-path: /book
+
+spring:
+  profiles:
+    active: test,dev  # 激活多配置文件
